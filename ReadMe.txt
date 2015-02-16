@@ -11,3 +11,6 @@ An handbook with a complete description of RandA is included.
 
 N.B. A copy of PC archive and documentation is also contained in archive for 
 Raspberry and extracted to /home/pi/RandA directory for backup. 
+
+More info on open-electronics site
+http://www.open-electronics.org/tag/randa/
