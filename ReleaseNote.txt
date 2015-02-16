@@ -1,0 +1,13 @@
+Version 1.3
+Update
+
+Software PC
+- RAComm library bugs correct
+- New examples
+
+Software Raspberry
+- C programs in cworkspace modified (so also commands in /home/pi/bin)
+- New commands  
+
+A copy of PC archive and documentation is also contained in Raspberry archive 
+and extracted in /home/pi/RandA
