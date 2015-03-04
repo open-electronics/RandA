@@ -1,7 +1,7 @@
 ***************************************************************
 
-Please note that downloading files are in releases version!
-So, for downloading, open menu "release". 
+**Please note that downloading files are in release versions!**
+So, for downloading, open menu "release" (see up there). 
 This page is intended as a project description.
 
 ****************************************************************
