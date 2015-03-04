@@ -1,18 +1,18 @@
 ***************************************************************
 
-Please note that downloading files are in release versions!
+PLEASE NOTE that downloading files are in release versions!
 So, for downloading, open menu "release" (see up there). 
 This page is intended as a project description.
-A detailed description is in RandA-en.pdf file.
+For this purpose see RandA-en.pdf file for more details.
 
 ****************************************************************
 
-Attenzione! Il downloading del software per RandA lo potete
+ATTENZIONE! Il downloading del software per RandA lo potete
 trovare nelle varie cartelle di release.
 Per cui attivate la voce di menù "release" (che vedete in alto).
 Questa pagina è usata solo per introdurre il progetto RandA, 
 di cui potete avere una visione approfondita tramite il file 
-RandA-en.pdf (in Inglese)
+RandA-en.pdf (in Inglese).
 
 ****************************************************************
 
