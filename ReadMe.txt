@@ -1,3 +1,14 @@
+***************************************************************
+
+Please note that downloading files are in releases version!
+So, for downloading, open menu "release". 
+This page is intended as a project description.
+
+****************************************************************
+
+
+
+
 RandA software distribution.
 
 Two software for two environments.
