@@ -27,19 +27,19 @@ Two software for two environments.
   there, or you can unzip locally and copy archive and installation script later.
   Read the InstallationREADME.TXT file included.
   
+An handbook with a complete description of RandA (RandA-en.pdf) is included.    
+
+N.B. A copy of PC archive and documentation is also contained in archive for 
+Raspberry and extracted to /home/pi/RandA directory for backup. 
+
 These procedures for upgrading your Raspbian OS, already installed, and for upgrading
-Arduino IDE, are the shortest software to download.
+Arduino IDE, are the shortest software to download (single zip file of about 20M).
 But, if you like, you can use a complete Raspbian image (with RandA software)
 to download and install, on your SD card.
 And you can download, also, the entire Arduino IDE modified.
 Using these longer downloads, you are directly operating, without installation
 procedure. But you lose your already installed software (if any) and you need to 
 install it again.
-  
-An handbook with a complete description of RandA is included.    
-
-N.B. A copy of PC archive and documentation is also contained in archive for 
-Raspberry and extracted to /home/pi/RandA directory for backup. 
 
 More info on open-electronics site
 http://www.open-electronics.org/tag/randa/
