@@ -1,8 +1,12 @@
 Please, note that RandA software has been tested on Raspberry Pi 2.
 The outcome was that Version 1.3 (self-installing software) is compatible with the new Raspian and new hardware.
 You have just to enable I2C device using "sudo raspi-config" command and Advanced Options menu item.
+Do not install the entire SD image of V1.3 release, because it is based on a Raspbian release non compatible with Raspberry Pi 2.
+Just use the self-installing software on new Raspbian release.
 In any case, a new version will be released soon.
 
-Si rende noto che testando la versione 1.3 del software per RandA su Raspberry Pi 2, è risultata compatibile a patto di abilitare la periferica I2C (disabilitata per default nelle nuove versioni di Raspbian).
+Si rende noto che testando la versione 1.3 del software per RandA su Raspberry Pi 2, questa è risultata compatibile a patto di abilitare la periferica I2C (disabilitata per default nelle nuove versioni di Raspbian).
 Per fare ciò basta utilizzare il solito comando "sudo raspi-config" e la voce di menù: Advanced Options.
+Naturalmente non dovete scaricare l'immagine completa della SD, perché è basata su una versione di Raspbian non compatibile con Raspberry Pi 2.
+Usate invece il software auto-istallante da utilizzare con una recente release di Raspbian.
 A breve sarà comunque rilasciata una nuova versione del software.
