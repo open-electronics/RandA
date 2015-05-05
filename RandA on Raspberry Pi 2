@@ -1,12 +1,38 @@
-Please, note that RandA software has been tested on Raspberry Pi 2.
-The outcome was that Version 1.3 (self-installing software) is compatible with the new Raspian and new hardware.
-You have just to enable I2C device using "sudo raspi-config" command and Advanced Options menu item.
-Do not install the entire SD image of V1.3 release, because it is based on a Raspbian release non compatible with Raspberry Pi 2.
-Just use the self-installing software on new Raspbian release.
-In any case, a new version will be released soon.
+While waiting for new RandA SW release (Raspberry Pi 2 compatible), you can adapt the 1.3 release to Raspberry Pi 2 in this way:
 
-Si rende noto che testando la versione 1.3 del software per RandA su Raspberry Pi 2, questa è risultata compatibile a patto di abilitare la periferica I2C (disabilitata per default nelle nuove versioni di Raspbian).
-Per fare ciò basta utilizzare il solito comando "sudo raspi-config" e la voce di menù: Advanced Options.
-Naturalmente non dovete scaricare l'immagine completa della SD, perché è basata su una versione di Raspbian non compatibile con Raspberry Pi 2.
-Usate invece il software auto-istallante da utilizzare con una recente release di Raspbian.
-A breve sarà comunque rilasciata una nuova versione del software.
+- 1 First of all, use self-installing procedure (the complete SD image is only Raspberry Pi /plus compatible).
+- 2 Enable I2C using "sudo raspi-config", and the "Advanced Options" item.
+    That is mandatory to enable electronic switch !
+    (Next release will automatically enable I2C by script).
+- 3 Replace old "wiringPi" release. That is mandatory to enable I/O pin management.
+    (otherwise several RandA commands don't work: like software Arduino reset and sketches uploading)
+    So, you have to:
+    - go to old wiringPi directory: wiringPi-df45388 ; and to run "./build uninstall" command
+    - copy file "wiringPi-5edd177.tar.gz" (from https://git.drogon.net/?p=wiringPi;a=snapshot;h=5edd177112c99416f68ba3e8c6c4db6ed942e796;sf=tgz)
+    - from /home/pi run "tar xfz wiringPi-5edd177.tar.gz" command
+    - finally "cd wiringPi-5edd177" and "./build" command
+- 4 Replace Java Tomcat link to new location. That is mandatory to make RandA web application working.
+    - edit the two files: /home/apache-tomcat-7.0.47/bin/startup.sh and /home/apache-tomcat-7.0.47/bin/shutdown.sh
+    - change JAVA-HOME environment variable setting with new value :
+        export JAVA_HOME="/usr/lib/jvm/jdk-8-oracle-arm-vfp-hflt"
+      (you can find this assignment at the begin of files (with comment character #); change assignment and remove comment)
+
+
+In attesa di una nuova release collaudata per Raspberry Pi 2, riassumo qui I passi necessary per adattare la release 1.3 del SW di RandA per rendarla operative su Raspberry Pi 2.
+
+- 1 Innanzi tutto bisogna utilizzare il software auto-istallante e non l'immagine completa della SD che è compatibile solo con Raspberry Pi o plus.
+- 2 Abilitare I2C tramite comando "sudo raspi-config", utilizzando la voce "Advanced Options".
+    Questo è assolutamente necessario per abilitare la gestione dell'interruttore elettronico.
+    Nella nuova release I2C sarà abilitato automaticamente (tramite script).
+- 2 Sostituire la vecchia versione di "wiringPi". E' necessario per abilitare la gestione dei pin I/O di Rasp2.
+    (altrimenti molti comandi di RandA non funzionano: come il reset software di Arduino e quindi l'uploading degli sketch)
+    Per fare ciò:
+    - andare nella cartella del vecchio wiringPi: wiringPi-df45388 ; e lanciare il comando "./build uninstall"
+    - copiare in /home/pi il file "wiringPi-5edd177.tar.gz" dahttps://git.drogon.net/?p=wiringPi;a=snapshot;h=5edd177112c99416f68ba3e8c6c4db6ed942e796;sf=tgz
+      da /home/pi lanciare il comando "tar xfz wiringPi-5edd177.tar.gz"
+    - quindi "cd wiringPi-5edd177" e poi "./build"
+- 3 Aggiornare il puntamento di Tomcat alla nuova collocazione di Java. E' necessario per far funzionare bene l'applicazione RandA sul server web.
+    - editare i due file: /home/apache-tomcat-7.0.47/bin/startup.sh e /home/apache-tomcat-7.0.47/bin/shutdown.sh
+    - modificare l'assegnazione della variabile di ambiente JAVA-HOME con :
+        export JAVA_HOME="/usr/lib/jvm/jdk-8-oracle-arm-vfp-hflt"
+      (la trovate all'inizio, commentata e con il vecchio valore; quindi aggiornatela e togliete il commento (il carattere #))
