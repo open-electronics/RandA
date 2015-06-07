@@ -1,0 +1,73 @@
+Version 1.4
+Software Raspberry.
+Major updates
+- Changes for Raspberry Pi 2 and for new Raspbian release 
+  - Automatically I2C enabled (by script)
+  - New wiringPi release (compatible with Raspberry pi 2)
+  - Tomcat Java link correction 
+    If you have to change link, edit file: /etc/profile.d/setvar.sh
+
+- New HTML Raspberry console (Shellinabox)
+  Shellinabox starts as demon and uses SSL (HTTPS) by default.
+  If you want change its behaviour you can use the utility: 
+    /home/pi/RandAutil/WConsoleSetSSL.sh  with argument SSL or NOSSL
+  Certificate is automatically generated and is: /var/lib/shellinabox/certificate.pem  
+
+- RandA web application is now protected by login:  user randa and psw. randa by default.
+  If you want disable protection you have to edit file:
+    /home/apache-tomcat-7.0.47/webapps/RandA/WEB-INF/web.xml
+  But if you want just change user/psw you have to edit file:
+    /home/apache-tomcat-7.0.47/conf/tomcat-users.xml
+  Furthermore, RandA web application too, uses secure protocol (HTTPS) by default.
+  But you can change its behaviour using the utility:
+    /home/pi/RandAutil/WRandASetSSL.sh  with argument SSL or NOSSL
+  Certificate is generated automatically in installation phase by the script:
+    /home/pi/RandAutil/CreaWebSSLCertificate.sh
+  and the file is : /home/pi/.keystore     
+
+Please note that SSL certificate is private (not validated by international org.).
+So, browsers show warning. Don't care and continue.
+But you can tell your browser to locally register certificate as valid certificate.
+Or, if you like, you can ask to int. org. for validation.   
+
+Installation archive (RandAinstall.tar.gz) now contains the complete Arduino 
+for Linux package and other important packages. So, you can install RandA 
+software without Internet. At the end of installation, the procedure (RandAinstall.sh)
+asks for downloading and installing Codeblocks (C++ IDE) and Eclipse (Java IDE).
+Package self contained and installed:
+- wiringPi : crucial for RandA operation
+- tomcat (as directory not package)(it uses Java): web server with applications 
+- shellinabox : web console
+- pi4j : java version of wiringPi (just for convenience) 
+- arduino : for local sketches developping (local option for sketches developping)
+External packages (optional)(require Internet)
+- codeblocks : C++ IDE (recommended)
+- eclipse : Java IDE (useful if Raspberry Pi 2)(otherwise it is too slow)
+IMPORTANT: please note that eclipse from Debian installs Java 6; to restore Java 8 use the
+utility  "/home/pi/RandAutil/java8ResetLink.sh"
+
+- correct uploading process. Now sketch is uploaded at first attempt (always). 
+  (Bug on previous installation procedure: modified /boot/cmdline.txt had comment and 
+   serial port could be shared with Linux kernel)           
+
+Minor updates
+- new command "explorer" with argument -r opens file management window with
+  root privileges. 
+  (Because the new pcmanfm program no more has the "root opening window" menu item)
+
+- new commands: GetSketchName and SketchVerify
+  Both work only if sketch implements itsMe() function (replying with name to ? )   
+
+- better version of ArduIO and ArduInt (commands to manage Arduino I/O from Raspberry)
+  If appropriate sketch is not inside it will be uploaded.
+
+- New command "startgui" to start Raspberry desktop (in X environment like MobaXterm)
+
+- Arduino I/O web page now automatically uploads SerialIO sketch if is not inside. 
+  So, now, when you open serial communication, are ready to operate.
+  
+Software PC (Arduino IDE)
+
+- Modified detecting remote port: now the file "remoteport.properties" contains 
+  timeout setting. So, it is possible to increase timeout if local network is big
+  or decrease if small.  
