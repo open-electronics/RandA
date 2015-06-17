@@ -1,6 +1,6 @@
 ***************************************************************
 
-PLEASE NOTE that downloading files are in release versions!
+PLEASE NOTE that downloading files are in release directory!
 So, **for downloading, open menu "releases" (see up there)**. 
 This page is intended as a project description.
 For this purpose see RandA-en.pdf file for more details.
