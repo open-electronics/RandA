@@ -1,0 +1,90 @@
+Versione 1.4 (compatibile con Raspberry Pi 2)
+
+Modifiche che riguardano il software installato su Raspberry
+
+Modifiche principali:
+
+- Cambiamenti per renderlo compatibile con Raspberry 2:
+  - I2C abilitato automaticamente dalla procedura di istallazione
+  - Nuova versione di "wiringPi" compatibile con Raspberry 2
+  - Modifica del puntamento a Java per Tomcat
+    (per modificare il link ora dovete semplicemente editare il file 
+     "/etc/profile.d/setvar.sh")
+
+- Nuova web Raspberry console (Shellinabox)
+  Shellinabox parte automaticamente come "demone" e usa SSL (HTTPS) per default
+  Se volete cambiare usate l'utility;
+     /home/pi/RandAutil/WConsoleSetSSL.sh  con il parametro SSL o NOSSL
+  Il certificato di crittografia è generato automaticamente ed è: 
+    /var/lib/shellinabox/certificate.pem
+
+- RandA web application è ora protetta con un login: user=randa password=randa
+  Se volete disabilitare la protezione dovete editare il file:
+     /home/apache-tomcat-7.0.47/webapps/RandA/WEB-INF/web.xml
+  Ma se volete semplicemente cambiare user e password dovete editare il file:
+      /home/apache-tomcat-7.0.47/conf/tomcat-users.xml
+  Inoltre, anche RandA web application usa SSL (HTTPS) per default.
+  Per modificare usate l'utility:
+     /home/pi/RandAutil/WRandASetSSL.sh  con parametro SSL o NOSSL
+  Per completezza sappiate che il certificato di crittografia è generato
+  automaticamente dalla procedura di istallazione con lo script:
+    /home/pi/RandAutil/CreaWebSSLCertificate.sh
+  ed il file del certificato è: "/home/pi/.keystore "    
+  
+Attenzione, poiché il certificato SSL è di tipo privato (cioè non è convalidato 
+dalle organizzazioni internazionali) i browser potrebbero mostrare un avviso di
+non sicurezza, ma potete non curarvene e continuare. Però, se credete opportuno,
+potete registrare sul vostro browser il sito come sicuro. Oppure addirittura 
+potete richiedere un certificato riconosciuto.
+
+Archivio del software di istallazione ora contiene anche il pacchetto completo 
+per l'istallazione di Arduino IDE per Linux. Quindi non avete più bisogno della 
+rete per una istallazione di base completa. Alla fine dell'istallazione la 
+procedura chiederà se volete istallare anche l'IDE C++ (Codebloks) e l'IDE Java 
+(Eclipse). In caso affermativo però questa volta avete bisogno della rete. 
+Riassumendo il software autoistallante contiene:
+- wiringPi : fondamentale per RandA
+- shelliabox : Linux web console
+- pi4j : versione Java di wiringPI (per comodità)
+- arduino ; IDE per Linux
+Mentre la procedura potrebbe anche istallare (se acconsentite e solo se siete connessi)
+- codebloks C++ IDE (molto utile)
+- eclipse : Java IDE (abbastanza pesante e preferibile solo su Raspberry Pi 2)
+IMPORTANTE: in quest'ultimo caso, tenete presente che l'istallazione dal sito Debian
+di eclipse, purtroppo istalla anche Java 6 e dirotta il puntamento a Java a questa
+release. Se volete ripristinare il link su Java 8 utilizzate l'utility:
+    "/home/pi/RandAutil/java8ResetLink.sh"
+
+- E' stato corretto il processo di uploading degli sketch. Un solo script è 
+  responsabile del caricamento sia da remoto che da locale. Ora l'uploading avviene
+  con affidabilità sempre al primo tentativo. 
+
+Modifiche minori:
+
+- il comando "explorer" ora può ricevere il parametro "-r" che abilita l'accesso
+  privilegiato come root. (questo per ovviare alla nuova versione di "pcmanfm" che
+  non ha più il menu "root opening window")
+
+- 2 nuovi comandi :  GetSketchName e SketchVerify
+  Ambedue servono a verificare la presenza di un particolare sketch su Arduino, 
+  ma funzionano solo se lo sketch implementa la funzione itsMe().
+ 
+- versione migliorata dei comandi ArduIO e ArduInt. Ora se lo sketch che 
+  utilizzano non è presente lo caricano su Arduino. 
+  
+- Nuovo comando "startgui" che lancia tutto il desktop grafico di Raspberry in 
+  ambiente ssh-X (come MobaXterm).
+  
+- La pagina web "Arduino I/O" è stata modificata ed ora carica lo sketch che 
+  utilizza (SerialIO) se non lo trova già presente. Quindi ora aprendo la 
+  connessione seriale si è già pronti ad operare.
+  
+ATTENZIONE: se lasciate la connessione seriale attiva, non vi potrà funzionare 
+il caricamento da remoto o da locale.
+
+Modifiche che riguardano il software su PC (ovvero gli aggiornamenti di Arduino IDE)        
+
+- E' stato migliorato l'accesso alla porta remota: ora esiste un file di 
+  configurazione di nome "remoteport.properties" che permette la modifica del tempo
+  di scansione della rete per l'individuazione di porte remote. In questo modo è 
+  possibile ridurre il timeout per reti locali piccole.  
