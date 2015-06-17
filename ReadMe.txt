@@ -1,18 +1,22 @@
 ***************************************************************
 
-PLEASE NOTE that downloading files are in release versions!
-So, for downloading, open menu "release" (see up there). 
+**PLEASE NOTE** that downloading files are in release versions!
+So, **for downloading, open menu "releases" (see up there)**. 
 This page is intended as a project description.
 For this purpose see RandA-en.pdf file for more details.
 
+**Version 1.4 is Raspberry Pi 2 compliant**
+
 ****************************************************************
 
-ATTENZIONE! Il downloading del software per RandA lo potete
+**ATTENZIONE!** Il downloading del software per RandA lo potete
 trovare nelle varie cartelle di release.
-Per cui attivate la voce di menù "release" (che vedete in alto).
+**Per cui attivate la voce di menù "releases" (che vedete in alto)**.
 Questa pagina è usata solo per introdurre il progetto RandA, 
 di cui potete avere una visione approfondita tramite il file 
 RandA-en.pdf (in Inglese).
+
+**La versione 1.4 è compatibile con Raspberry Pi 2**
 
 ****************************************************************
 
