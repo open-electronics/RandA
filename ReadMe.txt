@@ -5,7 +5,7 @@ So, **for downloading, open menu "releases" (see up there)**.
 This page is intended as a project description.
 For this purpose see RandA-en.pdf file for more details.
 
-**Version 1.4 is Raspberry Pi 2 compliant**
+**Version 1.5 is Raspberry Pi 3 , and Raspbian-jessie compliant**
 
 ****************************************************************
 
@@ -16,7 +16,7 @@ Questa pagina è usata solo per introdurre il progetto RandA,
 di cui potete avere una visione approfondita tramite il file 
 RandA-en.pdf (in Inglese).
 
-**La versione 1.4 è compatibile con Raspberry Pi 2**
+**La versione 1.5 è compatibile con Raspberry Pi 3 e con Raspbian-jessie**
 
 ****************************************************************
 
@@ -30,6 +30,8 @@ Two software for two environments.
 - A zip file for Raspberry. You can copy this file to Raspberry and unzip it 
   there, or you can unzip locally and copy archive and installation script later.
   Read the InstallationREADME.TXT file included.
+  
+  But since version 1.4 you can download, also, a complete and configured SD image for Raspberry Pi.
   
 An handbook with a complete description of RandA (RandA-en.pdf) is included.    
 
