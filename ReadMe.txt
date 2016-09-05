@@ -1,3 +1,5 @@
+Last Version is V1.5 (see release tab)
+
 ***************************************************************
 
 PLEASE NOTE that downloading files are in release directory!
