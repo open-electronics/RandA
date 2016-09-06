@@ -1,5 +1,5 @@
 Last Version is V1.5 (see release tab)
-For detailed information about hardware/software read pdf file
+For detailed informations about hardware/software read pdf file
 
 ***************************************************************
 
