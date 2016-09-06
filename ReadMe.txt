@@ -1,5 +1,7 @@
-Last Version is V1.5 (see release tab)
+Last Version is V1.5 (use releases tab above to reach the software)
 For detailed informations about hardware/software read pdf file
+
+L'ultima versione è la V1.5 (usate il menu <releases> più sopra per raggiungerla)
 
 ***************************************************************
 
