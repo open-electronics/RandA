@@ -3,6 +3,8 @@ For detailed informations about hardware/software read pdf file
 
 L'ultima versione è la V1.5 (usate il menu <releases> più sopra per raggiungerla)
 
+USARE MENU "tags" o "releasese" PER ACCEDERE ALLE VERSIONI
+
 ***************************************************************
 
 PLEASE NOTE that downloading files are in release directory!
@@ -11,6 +13,8 @@ This page is intended as a project description.
 For this purpose see RandA-en.pdf file for more details.
 
 **Version 1.5 is Raspberry Pi 3 , and Raspbian-jessie compliant**
+
+USES MENU "tags" or "release" FOR VERSIONS LIST AND DOWNLOAD
 
 ****************************************************************
 
